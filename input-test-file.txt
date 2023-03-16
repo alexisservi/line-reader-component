@@ -1,0 +1,31 @@
+
+
+git clone https://github.com/alexisservi/cloud-build-samples.git
+
+
+cloudbuil repo token
+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
+
+
+#------------------------------
+# Example conteinerized python program
+
+python3 line-reader-writer.py --input1-path C:\Users\Servi\Documents\data\chipper\commands-chipper.txt \
+  --param1 7 \
+  --output1-path C:\Users\Servi\Documents\data\chipper\test-out-file.txt
+
+
+# Para crear el contenedor
+docker build -t containerized_py_app:latest .
+
+
+# Para listar imagenes
+docker images
+
+
+# Para correr el contenedor
+docker run --name testing-run -it containerized_py_app
+docker run -it containerized_py_app python3 line-reader-writer.py --input1-path C:\Users\Servi\Documents\data\chipper\commands-chipper.txt --param1 7  --output1-path C:\Users\Servi\Documents\data\chipper\test-out-file.txt
+
+# Para listar contenedores que estan corriendo
+docker ps
