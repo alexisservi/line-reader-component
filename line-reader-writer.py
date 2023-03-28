@@ -8,7 +8,7 @@ def do_work(input1_file, output1_file, param1):
     if x >= param1:
       break
     _ = output1_file.write(line)
-    print(line)
+    print(line.strip())
   
 # Defining and parsing the command-line arguments
 parser = argparse.ArgumentParser(description='My program description')
