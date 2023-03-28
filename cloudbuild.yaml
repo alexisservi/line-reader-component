@@ -8,6 +8,10 @@ steps:
     args: ['push', 'us-central1-docker.pkg.dev/${PROJECT_ID}/ml-automation-docker-images/line-reader-comp:latest']
 
   # Copy component secification .yaml to Google Cloud Storage 
-  - name: 'ubuntu'
-    entrypoint: 'bash'
-    args: ['./copy_component_specification.sh']
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gsutil'
+    args: ['cp', 'kubeflow_component_spec.yaml', 'gs://ml-auto-pipelines-bucket/components-yamls/line-reader-writer/kubeflow_component_spec.yaml']
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gsutil'
+    args: ['acl', 'ch', '-u', 'AllUsers:R', 'gs://ml-auto-pipelines-bucket/components-yamls/line-reader-writer/kubeflow_component_spec.yaml']
