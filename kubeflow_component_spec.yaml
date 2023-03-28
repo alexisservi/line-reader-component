@@ -2,7 +2,7 @@ name: Get Lines
 description: Gets the specified number of lines from the input file.
 
 inputs:
-- {name: input_1, type: String, description: 'Data path for input_1'}
+- {name: input_1, type: LocalPath, description: 'Data path for input_1'}
 - {name: parameter_1, type: Integer, default: '10', description: 'Number of lines to copy'}
 
 outputs:
