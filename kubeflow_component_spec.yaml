@@ -10,7 +10,7 @@ outputs:
 
 implementation:
   container:
-    image: us-central1-docker.pkg.dev/${PROJECT_ID}/ml-automation-docker-images/line-reader-comp:latest
+    image: us-central1-docker.pkg.dev/almacafe-ml-poc/ml-automation-docker-images/line-reader-comp:latest
     # command is a list of strings (command-line arguments). 
     # The YAML language has two syntaxes for lists and you can use either of them. 
     # Here we use the "flow syntax" - comma-separated strings inside square brackets.
