@@ -19,7 +19,7 @@ implementation:
       # Path of the program inside the container
       line-reader-writer.py,
       --input1-path,
-      {inputValue: input_1},
+      {inputPath: input_1}, # InputPathPlaceholder
       --param1, 
       {inputValue: parameter_1},
       --output1-path, 
