@@ -10,7 +10,7 @@ def do_work(input1_file, output1_file, param1):
     _ = output1_file.write(line)
     print(line.strip())
   
-# Defining and parsing the command-line arguments
+# Defining and parsing the command-line arguments 
 parser = argparse.ArgumentParser(description='My program description')
 # Paths must be passed in, not hardcoded
 parser.add_argument('--input1-path', type=str,
